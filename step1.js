@@ -14,7 +14,7 @@ async function cat(filepath) {
     const content = await fsP.readFile(filepath, 'utf8');
     console.log(content);
 
-  } catch {
+  } catch { // catch(error)
 
     console.log(`Error reading ${filepath}`);
     console.log(`Error: ENOENT: no such file or directory, open '${filepath}'`);
